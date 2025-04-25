@@ -1,0 +1,215 @@
+@font-face {
+  font-family: 'Blue Paradise Personal Use';
+  src: url('fonts/BlueParadisePersonalUse.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: url('ELEMEN/BACKGROUND.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.container {
+  width: 90%;
+  height: 100%;
+  position: relative;
+}
+
+.graphic {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  color: white;
+  font-size: 8.5rem;
+  font-family: "Bernard MT Condensed", sans-serif;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.desainer {
+  position: absolute;
+  top: -20%;
+  left: 9%;
+  color: rgb(0, 0, 0);
+  font-size: 5rem;
+  font-family: "Sunday Midnight", sans-serif;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.name {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  color: white;
+  font-size: 2.3rem;
+  font-family: 'Blue Paradise Personal Use', cursive;
+  font-weight: bold;
+}
+
+.deskripsi {
+  position: absolute;
+  top: 81%;
+  left: 5%;
+  color: rgb(185, 185, 185);
+  font-size: 1.1rem;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+.profile {
+  position: absolute;
+  width: 65%;
+  left: 45%;
+  top: -14%;
+}
+
+.logo {
+  position: absolute;
+  width: 10%;
+  left: 1%;
+  top: -3%;
+}
+
+.bulat {
+  position: absolute;
+  width: 35%;
+  left: 62%;
+  top: 15%;
+  transform: scaleY(1.1);
+}
+
+.garis-bawah {
+  position: absolute;
+  width: 100%;
+  left: 0%;
+  bottom: 0%;
+}
+
+.nav-container {
+  display: flex;
+  gap: 10px;
+  top: 3%;
+  left: 65%;
+  position: absolute;
+}
+
+.nav-button {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease;
+  text-decoration: none;
+  text-align: center;
+  opacity: 0.4;
+  position: relative;
+  z-index: 10;
+}
+
+.nav-button:hover {
+  background-color: #444444;
+  color: #ffffff;
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.nav-button:active {
+  background-color: #888888;
+  color: #ffffff;
+  transform: scale(0.97);
+}
+
+.nav-button.active {
+  background-color: #222222;
+  color: #ffffff;
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade {
+  animation: fadeInUp 2.5s ease forwards;
+  opacity: 0;
+}
+
+.animate-fade-rotate {
+  animation: fadeInUp 2.5s ease forwards;
+  opacity: 0;
+}
+
+@keyframes textFadeOnly {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-text-only {
+  opacity: 0;
+  animation: textFadeOnly 2s ease forwards;
+}
+
+@keyframes fadeGraphicText {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scaleY(1.7);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scaleY(1.7);
+  }
+}
+
+@keyframes fadeDesignerText {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scaleY(1.3) rotate(-5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scaleY(1.3) rotate(-5deg);
+  }
+}
+
+.animate-graphic-text {
+  opacity: 0;
+  animation: fadeGraphicText 2s ease forwards;
+}
+
+.animate-desainer-text {
+  opacity: 0;
+  animation: fadeDesignerText 2s ease forwards;
+}
